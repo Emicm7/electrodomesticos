@@ -4,7 +4,7 @@ import Proveedor from '../Proveedores/proveedores.model';
 // Crear un nuevo proveedor
 export const post = async (req: Request, res: Response) => {
   try {
-    const { nombre, telefono, email, detalles } = req.body;
+    const { nombre, telefono, email, detalles, direccion } = req.body;
 
     // Crea un nuevo proveedor en la base de datos
     const proveedor = await Proveedor.create({
@@ -12,6 +12,7 @@ export const post = async (req: Request, res: Response) => {
       telefono,
       email,
       detalles,
+      direccion,
     });
     
 

@@ -3,6 +3,7 @@ interface Proveedor {
     telefono: number;
     email: string;
     detalles: string;
+    direccion: string;
   }
   
   export default Proveedor;

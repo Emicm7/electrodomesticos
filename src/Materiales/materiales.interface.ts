@@ -7,6 +7,7 @@ interface Material {
     costo: number;
     proveedorId: number; // Agrega este atributo para la relación
     proveedor?: Proveedor; // Agrega este atributo opcional para almacenar los datos del proveedor asociado
+    tipo: string;
   }
   
   export default Material;
