@@ -29,6 +29,10 @@ Proveedor.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
+    direccion: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
   },
   {
     sequelize,

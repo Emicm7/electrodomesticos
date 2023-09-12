@@ -34,6 +34,13 @@ Material.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
+    tipo: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isIn: [['solido', 'liquido', 'gaseoso']],
+      },
+    },
   },
   {
     sequelize,

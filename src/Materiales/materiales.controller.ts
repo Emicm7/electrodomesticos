@@ -4,7 +4,7 @@ import Material from '../Materiales/materiales.model';
 // Crear un nuevo material
 export const post = async (req: Request, res: Response) => {
   try {
-    const { nombre, descripcion, stock, costo, proveedorId } = req.body;
+    const { nombre, descripcion, stock, costo, proveedorId, tipo } = req.body;
 
     // Crea un nuevo material en la base de datos
     const material = await Material.create({
@@ -13,6 +13,7 @@ export const post = async (req: Request, res: Response) => {
       stock,
       costo,
       proveedorId,
+      tipo,
     });
 
     res.status(201).json(material);
